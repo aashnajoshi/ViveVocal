@@ -5,28 +5,23 @@ from dotenv import load_dotenv
 import pyttsx3
 import os
 
-#Basic Setup
 load_dotenv()
-
 speech_key = os.getenv("SPEECH_API_KEY")
 speech_region = os.getenv("SPEECH_REGION")
 text_analytics_key = os.getenv("TEXT_ANALYTICS_KEY")
 text_analytics_endpoint = os.getenv("TEXT_ANALYTICS_ENDPOINT")
-
 engine = pyttsx3.init()
 
 def speech_to_text():
     speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=speech_region)
     audio_config = speechsdk.AudioConfig(use_default_microphone=True)
     speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config, audio_config=audio_config)
-
     print("Listening...")
     result = speech_recognizer.recognize_once()
     if result.reason == speechsdk.ResultReason.RecognizedSpeech:
         print(f"Recognized: {result.text}")
         return result.text
-    else:
-        return None
+    else: return None
 
 def authenticate_client():
     credential = AzureKeyCredential(text_analytics_key)
