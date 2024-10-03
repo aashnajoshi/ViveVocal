@@ -7,7 +7,9 @@ ViveVocal is an interactive web application that leverages Azure's cognitive ser
 - **Text-to-Speech Feedback:** The application verbalizes the detected sentiment back to the user, enhancing the user experience and providing immediate feedback.
 - **User-Friendly Interface:** Built with Streamlit, the app features an intuitive layout that allows users to start listening and receive results seamlessly.
 
-## All required libraries can be installed using a single-line command:
+
+## Usage
+### All required libraries can be installed using a single-line command:
 ```bash
 pip install -r requirements.txt
 ```
