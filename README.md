@@ -15,12 +15,12 @@ pip install -r requirements.txt
 ```
 
 ### While to run the code:
-### Console-based version:
+#### Console-based version:
 ```bash
 python main.py
 
 ```
-### Streamlit-based version:
+#### Streamlit-based version:
 ```bash
 streamlit run app.py
 ```
